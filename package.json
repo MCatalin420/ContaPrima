@@ -1,0 +1,21 @@
+{
+  "scripts": {
+    "test": "hardhat test",
+    "test:all": "node test/run-tests.js",
+    "test:simple": "node test/test-runner.js",
+    "test:comprehensive": "node test/comprehensive-test-runner.js",
+    "test:112": "hardhat test test/Declaratia112.test.js",
+    "test:300": "hardhat test test/Declaratia300.test.js",
+    "test:394": "hardhat test test/Declaratia394.test.js",
+    "test:100": "hardhat test test/Declartia100.test.js",
+    "test:integration": "hardhat test test/AllDeclaratia.test.js",
+    "test:coverage": "hardhat coverage"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^6.1.0",
+    "hardhat": "^2.26.1"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.4.0"
+  }
+}
