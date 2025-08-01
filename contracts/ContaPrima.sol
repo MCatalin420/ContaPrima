@@ -68,4 +68,8 @@ contract ContaPrima {
         declartia100.payForDeclartia100(msg.sender, amount);
         declaratiaAmount[msg.sender][Declaratia.Declartia100] += amount;
     }
+
+    function getDeclaratiaAmount(address _address, Declaratia _declaratia) public view returns (uint256) {
+        return declaratiaAmount[_address][_declaratia];
+    }
 }
