@@ -34,6 +34,7 @@ contract ContaPrima {
 
     function payForDeclaratia112(uint256 amount) public {   
         //approve the contract to spend the tokens
+        require(amount > 0, "Amount must be greater than 0");
         erc20ron.approve(address(this), amount);
         erc20ron.transferFrom(msg.sender, address(this), amount);
         declaratia112.payForDeclaratia112(msg.sender, amount);
@@ -43,6 +44,7 @@ contract ContaPrima {
 
     function payForDeclaratia300(uint256 amount) public {
         //approve the contract to spend the tokens
+        require(amount > 0, "Amount must be greater than 0");
         erc20ron.approve(address(this), amount);
         erc20ron.transferFrom(msg.sender, address(this), amount);
         declaratia300.payForDeclaratia300(msg.sender, amount);
@@ -51,6 +53,7 @@ contract ContaPrima {
 
     function payForDeclaratia394(uint256 amount) public {
         //approve the contract to spend the tokens
+        require(amount > 0, "Amount must be greater than 0");
         erc20ron.approve(address(this), amount);
         erc20ron.transferFrom(msg.sender, address(this), amount);
         declaratia394.payForDeclaratia394(msg.sender, amount);
@@ -59,6 +62,7 @@ contract ContaPrima {
 
     function payForDeclartia100(uint256 amount) public {
         //approve the contract to spend the tokens
+        require(amount > 0, "Amount must be greater than 0");
         erc20ron.approve(address(this), amount);
         erc20ron.transferFrom(msg.sender, address(this), amount);
         declartia100.payForDeclartia100(msg.sender, amount);

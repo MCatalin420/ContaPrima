@@ -213,7 +213,6 @@ describe("NewContract", function () {
     await newContract.waitForDeployment();
   });
 
-  // Add your tests here...
 });
 ```
 

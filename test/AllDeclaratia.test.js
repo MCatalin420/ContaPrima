@@ -217,7 +217,15 @@ describe("All Declaratia Contracts", function () {
 
       // Execute all scenarios
       for (const scenario of scenarios) {
-        await scenario.contract[Object.keys(scenario.contract.interface.functions).find(f => f.includes('payFor'))](scenario.firm.address, scenario.amount);
+        if (scenario.contract === declaratia112) {
+          await scenario.contract.payForDeclaratia112(scenario.firm.address, scenario.amount);
+        } else if (scenario.contract === declaratia300) {
+          await scenario.contract.payForDeclaratia300(scenario.firm.address, scenario.amount);
+        } else if (scenario.contract === declaratia394) {
+          await scenario.contract.payForDeclaratia394(scenario.firm.address, scenario.amount);
+        } else if (scenario.contract === declartia100) {
+          await scenario.contract.payForDeclartia100(scenario.firm.address, scenario.amount);
+        }
       }
 
       // Verify final amounts

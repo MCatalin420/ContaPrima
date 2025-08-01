@@ -31,7 +31,13 @@ This system digitizes the Romanian tax declaration payment process by:
 
 #### Constructor
 ```solidity
-constructor()
+    constructor() {
+        declaratia112 = new Declaratia112();
+        declartia100 = new Declartia100();
+        declaratia300 = new Declaratia300();
+        declaratia394 = new Declaratia394();
+        erc20ron = new ERC20RON();
+    }
 ```
 - Deploys all four Declaratia contracts
 - Deploys the ERC20RON token contract
@@ -169,9 +175,6 @@ npx hardhat test
 # Start local node
 npx hardhat node
 
-# Deploy contracts
-npx hardhat ignition deploy ./ignition/modules/Lock.js
-```
 
 ## 📁 Project Structure
 
@@ -194,7 +197,6 @@ ContaPrima/
 │   └── AllDeclaratia.test.js        # Integration tests
 ├── ignition/
 │   └── modules/
-│       └── Lock.js                    # Deployment module
 ├── hardhat.config.js
 └── package.json
 ```
